@@ -29,6 +29,7 @@
 
 - 5.查看当前文件的状态
   git status
+  git status -s 精简的方式显示文件状态
 
 - 6.提交修改最后一次的备注
   git commit --amend
