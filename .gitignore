@@ -1,0 +1,8 @@
+# 忽略index.css这个文件
+index.css
+
+# 忽略pdf文件
+*.pdf
+
+# 忽略node/modules/jquery文件
+/node
