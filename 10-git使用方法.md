@@ -3,8 +3,12 @@
 ### 基本使用
 
 - 配置自己的 git
+
+```shell
   git config --global user.name "胡爽"
   git config --global user.email "15897666973@163.com"
+```
+
 - 查看自己的 git 配置
   git config --list --global
 
