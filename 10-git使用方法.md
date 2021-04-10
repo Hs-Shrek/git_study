@@ -208,38 +208,39 @@ ssh-keygen -t rsa -C "425543526@qq.com"
   - 在一个新的分支进行开发；
 
 - 查看所有分支
-  git branch
+  `git branch`
 - 创建分支
-  git branch 分支名称
+  `git branch 分支名称`
   # 1.创建分支时是以当前分支最后一个版本为基准
   # 2.创建出来的分支是一份独立的代码
 - 切换分支
-  git checkout 分支名称
+  `git checkout 分支名称`
   # 1.切换分支后，当前工作目录中看到的代码就是新切换的分支的代码
   # 2.切换分支时，需要先提交代码 git commit，就是先定一个版本；
 - 创建 + 切换分支  
-  git checkout -b 分支名称
+  `git checkout -b 分支名称`
 - 删除分支
-  git branch -d/-D 分支名称
+  `git branch -d/-D 分支名称`
 
   # 如果 test 分支已经被合并了，那么才可以删除，否则无法删除
 
-  git branch -d test
+  `git branch -d test`
 
   # 强制删除分支，无论合并与否都会删除！
 
-  git branch -D test
+  `git branch -D test`
 
 - 普通合并
 
   - 前提 ： 合并前所有的分支都需要 commit 一个各自的版本
 
   - 在当前分支 把其他分支合并过来
-    git merge 其他分支名;
+    `git merge 其他分支名;`
   - 把其他分支删除
-    git branch -d test
-    git branch -D test
+    `git branch -d test`
+    `git branch -D test`
 
 - 冲突合并
   - 原因 ：不同分支的 【相同文件的相同位置】 的代码都进行了修改
-  - 解决了冲突之后，需要重新提交一个历史版本 git commit -a -m""
+  - 1.手动解决冲突
+  - 2.解决了冲突之后，需要重新提交一个历史版本 git commit -a -m""
