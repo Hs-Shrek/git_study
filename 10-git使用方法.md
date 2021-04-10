@@ -163,7 +163,7 @@ git reset --hard a59c6fe
 - 将本地的代码提交到 origin 这个文件内， 提示登录是指 github 的账户
 
   7. git branch -M main // 暂时忽略
-  8. git push -u origin main (-u 是将本地仓储和远程仓储关联，第一次输入，后续可以直接 push)
+  8. git push -u origin main (-u 是将本地仓储和远程仓储关联，第一次输入，后续可以直接 push main 是分支名称， 推送分支的时候，需要输入)
 
 ```bash
   # 修改别名 (把origin修改为其他的名称)
@@ -241,6 +241,30 @@ ssh-keygen -t rsa -C "425543526@qq.com"
     `git branch -D test`
 
 - 冲突合并
+
   - 原因 ：不同分支的 【相同文件的相同位置】 的代码都进行了修改
   - 1.手动解决冲突
   - 2.解决了冲突之后，需要重新提交一个历史版本 git commit -a -m""
+
+- 将分支推送到远程仓库
+
+```
+  git push -u 远程仓库别名 本地分支名 : 远程仓库分支名
+  git push -u origin payment:pay
+  只有第一次推送分支的时候需要 -u  后面可以直接push
+```
+
+- 查看远程仓库中所有的分支列表
+  `git remote show 远程仓库名称` 默认的仓库名称是 origin
+
+- 跟踪分支 把远程仓库的分支下载到本地
+  `git checkout 远程分支名`
+
+- 远程分支下载到本地并重命名
+  `git checkout -b 本地分支名 远程仓库名/远程分支名`
+
+- 拉取远程仓库中当前分支的最新代码
+  `git pull `
+
+- 删除远程仓库中的分支
+  `git push 远程仓库名 --delete 远程分支名`
